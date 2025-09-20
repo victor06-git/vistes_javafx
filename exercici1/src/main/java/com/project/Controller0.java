@@ -16,9 +16,12 @@ public class Controller0 {
 
     @FXML
     private void goNext(ActionEvent event) {
+        
         Main.nom = nomField.getText();
         Main.edat = edatField.getText();
-
+        
+        Controller1 controller1 = (Controller1) UtilsViews.getController("View2");
+        controller1.updateOutput();
         UtilsViews.setViewAnimating("View2");
     }
 

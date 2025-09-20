@@ -148,7 +148,7 @@ public class UtilsViews {
         }
 
         // Animate leftView 
-        final double seconds = 0.4;
+        final double seconds = 0.2;
         KeyValue kvLeft = new KeyValue(animatedViewLeft.translateXProperty(), xLeftEnd, Interpolator.EASE_BOTH);
         KeyFrame kfLeft = new KeyFrame(Duration.seconds(seconds), kvLeft);
         Timeline timelineLeft = new Timeline();

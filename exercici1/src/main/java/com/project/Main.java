@@ -7,8 +7,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    static String nom = "Hola";
-    static String edat = "25";
+    static String nom = "";
+    static String edat = "";
 
     final int WINDOW_WIDTH = 650;
     final int WINDOW_HEIGHT = 500;
