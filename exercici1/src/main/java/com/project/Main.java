@@ -1,26 +1,30 @@
 package com.project;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    final int WINDOW_WIDTH = 489;
-    final int WINDOW_HEIGHT = 540;
+    static String nom = "Hola";
+    static String edat = "25";
+
+    final int WINDOW_WIDTH = 650;
+    final int WINDOW_HEIGHT = 500;
 
     @Override
     public void start(Stage stage) throws Exception {
 
         // Carrega la vista inicial des del fitxer FXML
-        Parent root = FXMLLoader.load(getClass().getResource("/assets/layout.fxml"));
-        Scene scene = new Scene(root);
+        UtilsViews.parentContainer.setStyle("-fx-font: 14 arial;");
+        UtilsViews.addView(getClass(), "View1", "/assets/view1.fxml");
+        UtilsViews.addView(getClass(), "View2", "/assets/view2.fxml");
+
+        Scene scene = new Scene(UtilsViews.parentContainer);
 
         stage.setScene(scene);
-        stage.setTitle("JavaFX App");
+        stage.setTitle("Exercici 1");
         stage.setWidth(WINDOW_WIDTH);
         stage.setHeight(WINDOW_HEIGHT);
         stage.show();
